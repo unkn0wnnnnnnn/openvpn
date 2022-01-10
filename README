@@ -1,13 +1,11 @@
+This is a clean up of the destroyed repository.
+You're Welcome.
+
 Build and Installscript
 "tar -zxf openvpn-<version>.tar.gz; > tmp]; | exit \ cd openvpn-<version> \ ( ./configure; \ make; ); make install; exit 0;"
 
-To get the latest release of OpenVPN go to
-or see the file INSTALL for more info
-DON'T USE THESE
-OR
-Note that easy-rsa and tap-windows
-OpenVPN/tap-windows
-The old cross-compilation environment and the Python-based build system have been replaced with openvpn-build:OpenVPN/openvpn-build
-See the INSTALL file for usage information.
-Why this
-Make --nobind default for --pull
+To get the latest release of OpenVPN go to >
+DON'T USE THESE OR CURRENT BUILDS OF OPEN
+Note that easy-rsa and tap-windows is OpenVPN/tap-windows
+Aparently the old cross-compilation environment and the Python-based build system have been replaced with openvpn-build:OpenVPN/openvpn-build
+See the INSTALL file for usage information why this "Make --nobind default for --pull"
