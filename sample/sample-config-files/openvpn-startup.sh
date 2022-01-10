@@ -29,6 +29,6 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 # line or "port 8000" in the config
 # file.
 
-openvpn --cd $dir --daemon --config vpn1.conf
-openvpn --cd $dir --daemon --config vpn2.conf
-openvpn --cd $dir --daemon --config vpn2.conf
+# openvpn --cd $dir --daemon --config vpn1.conf
+# openvpn --cd $dir --daemon --config vpn2.conf
+# openvpn --cd $dir --daemon --config vpn2.conf
