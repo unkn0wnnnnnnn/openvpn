@@ -1,19 +1,13 @@
-*************************************************************************
+Build and Installscript
+"tar -zxf openvpn-<version>.tar.gz; > tmp]; | exit \ cd openvpn-<version> \ ( ./configure; \ make; ); make install; exit 0;"
 
-To get the latest release of OpenVPN, go to:
-Build and Install,
-script:	
-"tar -zxf openvpn-<version>.tar.gz; > tmp]; | exit \
-	cd openvpn-<version> \
-	( ./configure; \
-	make; ); make install; exit 0;"
-or see the file INSTALL for more info.
- DON'T USE THESE FILES
-  FOR ANYTHING OTHER THAN TESTING BECAUSE THEY ARE TOTALLY INSECURE.
+To get the latest release of OpenVPN go to
+or see the file INSTALL for more info
+DON'T USE THESE
+OR
 Note that easy-rsa and tap-windows
-  https://github.com/OpenVPN/tap-windows
- The old cross-compilation environment (domake-win) and the Python-based buildsystem have been replaced with openvpn-build:https://github.com/OpenVPN/openvpn-build
- See the INSTALL file for usage information.
- 
- Why this?
+OpenVPN/tap-windows
+The old cross-compilation environment and the Python-based build system have been replaced with openvpn-build:OpenVPN/openvpn-build
+See the INSTALL file for usage information.
+Why this
 Make --nobind default for --pull
