@@ -2,4 +2,4 @@
 
 # stop all openvpn processes
 
-killall -TERM openvpn
+##################3killall -TERM openvpn
