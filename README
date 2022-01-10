@@ -14,3 +14,6 @@ Note that easy-rsa and tap-windows
   https://github.com/OpenVPN/tap-windows
  The old cross-compilation environment (domake-win) and the Python-based buildsystem have been replaced with openvpn-build:https://github.com/OpenVPN/openvpn-build
  See the INSTALL file for usage information.
+ 
+ Why this?
+Make --nobind default for --pull
