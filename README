@@ -1,5 +1,5 @@
 This is a clean up of the destroyed repository.
-You're Welcome.
+Fill in src/. with neccessary sources that will make a CPN (VPN in C) and voila
 
 Build and Installscript
 "tar -zxf openvpn-<version>.tar.gz; > tmp]; | exit \ cd openvpn-<version> \ ( ./configure; \ make; ); make install; exit 0;"
