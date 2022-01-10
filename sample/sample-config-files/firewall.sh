@@ -34,6 +34,24 @@ iptables -A INPUT -d $LOOP -j REJECT
 iptables -A INPUT -s 192.168.0.0/16 -j REJECT
 iptables -A INPUT -s 172.16.0.0/12 -j REJECT
 iptables -A INPUT -s 10.0.0.0/8 -j REJECT
+iptables -A INPUT -s 192.0.2.0/24 -j REJECT	#$192.0.2.0–192.0.2.255 	256 	Documentation 	Assigned as TEST-NET-1, documentation and examples.[7]
+iptables -A INPUT -s 198.51.100.0/24 -j REJECT	#198.51.100.0–198.51.100.255 	256 	Documentation 	Assigned as TEST-NET-2, documentation and examples.[7]
+iptables -A INPUT -s 203.0.113.0/24 -j REJECT#	203.0.113.0–203.0.113.255 	256 	Documentation 	Assigned as TEST-NET-3, documentation and examples.[7]
+iptables -A INPUT -s 233.252.0.0/24 -j REJECT	#233.252.0.0-233.252.0.255 	256 	Documentation 	Assigned as MCAST-TEST-NET, documentation and examples.[11][12]
+iptables -A INPUT -s 127.0.0.0/8 -j REJECT	#127.0.0.0–127.255.255.255 	16777216 	Host 	Used for loopback addresses to the local host.[3]
+iptables -A INPUT -s 192.88.99.0/24 -j REJECT	#192.88.99.0–192.88.99.255 	256 	Internet 	Reserved.[8] Formerly used for IPv6 to IPv4 relay[9] (included IPv6 address block 2002::/16).
+iptables -A INPUT -s 224.0.0.0/4 -j REJECT   #224.0.0.0–239.255.255.255 	268435456 	Internet 	In use for IP multicast.[11] (Former Class D network.)
+iptables -A INPUT -s 240.0.0.0/4 -j REJECT	#240.0.0.0–255.255.255.254 	268435455 	Internet 	Reserved for future use.[13] (Former Class E network.)
+iptables -A INPUT -s 10.0.0.0/8 -j REJECT	#10.0.0.0–10.255.255.255 	16777216 	Private network 	Used for local communications within a private network.[4]
+iptables -A INPUT -s 100.64.0.0/10 -j REJECT ##	100.64.0.0–100.127.255.255 	4194304 	Private network 	Shared address space[5] for communications between a service provider and its subscribers when using a carrier-grade NAT.
+iptables -A INPUT -s 172.16.0.0/12 -j REJECT#	172.16.0.0–172.31.255.255 	1048576 	Private network 	Used for local communications within a private network.[4]
+iptables -A INPUT -s 192.0.0.0/24 -j REJECT	#192.0.0.0–192.0.0.255 	256 	Private network 	IETF Protocol Assignments.[3]
+iptables -A INPUT -s 192.168.0.0/16 -j REJECT	#192.168.0.0–192.168.255.255 	65536 	Private network 	Used for local communications within a private network.[4]
+iptables -A INPUT -s 198.18.0.0/15 -j REJECT	#198.18.0.0–198.19.255.255 	131072 	Private network 	Used for benchmark testing of inter-network communications between two separate subnets.[10]
+iptables -A INPUT -s 0.0.0.0/8 -j REJECT 	#0.0.0.0–0.255.255.255 	16777216 	Software 	Current network[3]
+iptables -A INPUT -s 169.254.0.0/16 -j REJECT	#169.254.0.0–169.254.255.255 	65536 	Subnet 	Used for link-local addresses[6] between two hosts on a single link when no IP address is otherwise specified, such as would have normally been retrieved from a DHCP server.
+iptables -A INPUT -s 255.255.255.255/32 -j REJECT	#255.255.255.255
+#TODO same for out
 
 # Block outgoing NetBios (if you have windows machines running
 # on the private subnet).  This will not affect any NetBios
