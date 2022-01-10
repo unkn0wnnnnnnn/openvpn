@@ -44,7 +44,10 @@ iptables -A INPUT -s 224.0.0.0/4 -j REJECT   #224.0.0.0–239.255.255.255 	26843
 iptables -A INPUT -s 240.0.0.0/4 -j REJECT	#240.0.0.0–255.255.255.254 	268435455 	Internet 	Reserved for future use.[13] (Former Class E network.)
 iptables -A INPUT -s 10.0.0.0/8 -j REJECT	#10.0.0.0–10.255.255.255 	16777216 	Private network 	Used for local communications within a private network.[4]
 iptables -A INPUT -s 100.64.0.0/10 -j REJECT ##	100.64.0.0–100.127.255.255 	4194304 	Private network 	Shared address space[5] for communications between a service provider and its subscribers when using a carrier-grade NAT.
-iptables -A INPUT -s 172.16.0.0/12 -j REJECT#	172.16.0.0–172.31.255.255 	1048576 	Private network 	Used for local communications within a private network.[4]
+
+iptables -A INPUT -s 172.16.0.0/12 -j REJECT  ##### -->>>> 172.16.0.0–172.31.255.255 	1048576 	
+########3-Private network 	Used for local communications within a private network.[4]
+
 iptables -A INPUT -s 192.0.0.0/24 -j REJECT	#192.0.0.0–192.0.0.255 	256 	Private network 	IETF Protocol Assignments.[3]
 iptables -A INPUT -s 192.168.0.0/16 -j REJECT	#192.168.0.0–192.168.255.255 	65536 	Private network 	Used for local communications within a private network.[4]
 iptables -A INPUT -s 198.18.0.0/15 -j REJECT	#198.18.0.0–198.19.255.255 	131072 	Private network 	Used for benchmark testing of inter-network communications between two separate subnets.[10]
